@@ -3,6 +3,7 @@ import appwriteService from "../appwrite/config";
 import { Container, PostCard } from '../components';
 import Spinner from '../components/Spinner';
 import { logout } from '../store/authSlice';
+import { NavLink } from 'react-router-dom';
 
 function Home() {
     const [posts, setPosts] = useState([]);
@@ -30,15 +31,16 @@ function Home() {
 
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 text-center">
+            <div className="w-full py-8 mt-4 text-center h-4/5">
                 <Container>
-                    <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
+                    <div className="flex flex-wrap ">
+                        <div className="p-2 w-full h-4/5">
                             <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
+                            <NavLink to="/login">Login to read posts</NavLink>
                             </h1>
                         </div>
                     </div>
+                    <p>Sample id:<br/>EmailId:test@app.com<br />Password:12345678</p>
                 </Container>
             </div>
         );

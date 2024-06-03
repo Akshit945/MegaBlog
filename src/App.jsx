@@ -24,16 +24,19 @@ function App() {
   }, [])
   
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
-      <div className='w-full block'>
-        <Header />
-        <main>
+    <div className="min-h-screen flex flex-col bg-gray-400">
+      <Header />
+      <main className="flex-1">
         <Outlet />
-        </main>
-        <Footer />
-      </div>
+      </main>
+      <Footer />
     </div>
-  ) : (<Spinner></Spinner>)
+  ) : (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Spinner />
+    </div>
+  );
+  
 }
 
 export default App
