@@ -40,7 +40,7 @@ function Home() {
                             </h1>
                         </div>
                     </div>
-                    <p>Sample id:<br/>EmailId:test@app.com<br />Password:12345678</p>
+                    <p>Sample id:<br/>EmailId: test@app.com<br />Password:12345678</p>
                 </Container>
             </div>
         );
